@@ -1,0 +1,6 @@
+{
+  "gordon_g": 0.05,
+  "div_g1": 0.12,
+  "fcfe_g": 0.15,
+  "rationale": "Gordon g capped at 5% (cyclical ROE 66% not sustainable). Div g1 12%: raised to $0.15/q in 2026. FCFE g 15%: memory cycle recovery; base-year FCFE depressed by heavy capex."
+}

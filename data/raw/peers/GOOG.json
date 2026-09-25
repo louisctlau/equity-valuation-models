@@ -1,0 +1,97 @@
+{
+ "ticker": "GOOG",
+ "peers": [
+  "META",
+  "MSFT",
+  "AMZN",
+  "PINS",
+  "ORCL"
+ ],
+ "data": {
+  "META": {
+   "ticker": "META",
+   "info": {
+    "longName": "Meta Platforms, Inc.",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "currency": "USD",
+    "currentPrice": 751.66,
+    "marketCap": 1914858373120,
+    "trailingPE": 28.343136,
+    "forwardPE": 21.496538,
+    "priceToBook": 7.3318377,
+    "enterpriseValue": 2002973360128,
+    "trailingEps": 26.52
+   },
+   "ebit": 87097000000.0
+  },
+  "MSFT": {
+   "ticker": "MSFT",
+   "info": {
+    "longName": "Microsoft Corporation",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "currency": "USD",
+    "currentPrice": 516.17,
+    "marketCap": 3832843862016,
+    "trailingPE": 28.788063,
+    "forwardPE": 21.801512,
+    "priceToBook": 8.665659,
+    "enterpriseValue": 3749371969536,
+    "trailingEps": 17.93
+   },
+   "ebit": 168985000000.0
+  },
+  "AMZN": {
+   "ticker": "AMZN",
+   "info": {
+    "longName": "Amazon.com, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail",
+    "currency": "USD",
+    "currentPrice": 249.67,
+    "marketCap": 2693018681344,
+    "trailingPE": 20.102255,
+    "forwardPE": 24.033398,
+    "priceToBook": 4.8805614,
+    "enterpriseValue": 2818537947136,
+    "trailingEps": 12.42
+   },
+   "ebit": 99585000000.0
+  },
+  "PINS": {
+   "ticker": "PINS",
+   "info": {
+    "longName": "Pinterest, Inc.",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "currency": "USD",
+    "currentPrice": 18.9,
+    "marketCap": 10703315968,
+    "trailingPE": 55.588234,
+    "forwardPE": 7.868443,
+    "priceToBook": 3.6935704,
+    "enterpriseValue": 10523113472,
+    "trailingEps": 0.34
+   },
+   "ebit": 319883000.0
+  },
+  "ORCL": {
+   "ticker": "ORCL",
+   "info": {
+    "longName": "Oracle Corporation",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "currency": "USD",
+    "currentPrice": 137.1,
+    "marketCap": 414554226688,
+    "trailingPE": 21.489029,
+    "forwardPE": 12.466821,
+    "priceToBook": 6.7067804,
+    "enterpriseValue": 559376105472,
+    "trailingEps": 6.38
+   },
+   "ebit": 24153000000.0
+  }
+ }
+}

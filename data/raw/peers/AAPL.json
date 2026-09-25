@@ -1,0 +1,97 @@
+{
+ "ticker": "AAPL",
+ "peers": [
+  "MSFT",
+  "DELL",
+  "HPQ",
+  "ORCL",
+  "CSCO"
+ ],
+ "data": {
+  "MSFT": {
+   "ticker": "MSFT",
+   "info": {
+    "longName": "Microsoft Corporation",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "currency": "USD",
+    "currentPrice": 516.17,
+    "marketCap": 3832843862016,
+    "trailingPE": 28.788063,
+    "forwardPE": 21.801512,
+    "priceToBook": 8.665659,
+    "enterpriseValue": 3749371969536,
+    "trailingEps": 17.93
+   },
+   "ebit": 168985000000.0
+  },
+  "DELL": {
+   "ticker": "DELL",
+   "info": {
+    "longName": "Dell Technologies Inc.",
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "currency": "USD",
+    "currentPrice": 562.89,
+    "marketCap": 357892653056,
+    "trailingPE": 32.70715,
+    "forwardPE": 19.331919,
+    "priceToBook": -252.41704,
+    "enterpriseValue": 364522340352,
+    "trailingEps": 17.21
+   },
+   "ebit": 8823000000.0
+  },
+  "HPQ": {
+   "ticker": "HPQ",
+   "info": {
+    "longName": "HP Inc.",
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "currency": "USD",
+    "currentPrice": 31.3,
+    "marketCap": 28226056192,
+    "trailingPE": 11.946565,
+    "forwardPE": 9.974601,
+    "priceToBook": -306.86273,
+    "enterpriseValue": 34251769856,
+    "trailingEps": 2.62
+   },
+   "ebit": 3223000000.0
+  },
+  "ORCL": {
+   "ticker": "ORCL",
+   "info": {
+    "longName": "Oracle Corporation",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "currency": "USD",
+    "currentPrice": 137.1,
+    "marketCap": 414554226688,
+    "trailingPE": 21.489029,
+    "forwardPE": 12.466821,
+    "priceToBook": 6.7067804,
+    "enterpriseValue": 559376105472,
+    "trailingEps": 6.38
+   },
+   "ebit": 24153000000.0
+  },
+  "CSCO": {
+   "ticker": "CSCO",
+   "info": {
+    "longName": "Cisco Systems, Inc.",
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "currency": "USD",
+    "currentPrice": 106.7,
+    "marketCap": 420674011136,
+    "trailingPE": 32.04204,
+    "forwardPE": 18.979416,
+    "priceToBook": 8.373224,
+    "enterpriseValue": 437005516800,
+    "trailingEps": 3.33
+   },
+   "ebit": 17479000000.0
+  }
+ }
+}

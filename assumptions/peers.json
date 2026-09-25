@@ -1,0 +1,50 @@
+{
+  "_note": "Comparable-company sets for relative valuation; medians used",
+  "peers": {
+    "NVDA": [
+      "AMD",
+      "AVGO",
+      "QCOM",
+      "TXN",
+      "AMAT",
+      "INTC"
+    ],
+    "AMD": [
+      "NVDA",
+      "AVGO",
+      "QCOM",
+      "TXN",
+      "AMAT",
+      "INTC"
+    ],
+    "MU": [
+      "INTC",
+      "QCOM",
+      "TXN",
+      "AMAT",
+      "WDC",
+      "STX"
+    ],
+    "AAPL": [
+      "MSFT",
+      "DELL",
+      "HPQ",
+      "ORCL",
+      "CSCO"
+    ],
+    "META": [
+      "GOOG",
+      "PINS",
+      "SNAP",
+      "RDDT",
+      "MSFT"
+    ],
+    "GOOG": [
+      "META",
+      "MSFT",
+      "AMZN",
+      "PINS",
+      "ORCL"
+    ]
+  }
+}

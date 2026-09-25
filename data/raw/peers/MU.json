@@ -1,0 +1,115 @@
+{
+ "ticker": "MU",
+ "peers": [
+  "INTC",
+  "QCOM",
+  "TXN",
+  "AMAT",
+  "WDC",
+  "STX"
+ ],
+ "data": {
+  "INTC": {
+   "ticker": "INTC",
+   "info": {
+    "longName": "Intel Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "currency": "USD",
+    "currentPrice": 123.0,
+    "marketCap": 650190913536,
+    "trailingPE": null,
+    "forwardPE": 59.648514,
+    "priceToBook": 7.085662,
+    "enterpriseValue": 678966132736,
+    "trailingEps": -2.09
+   },
+   "ebit": 2648000000.0
+  },
+  "QCOM": {
+   "ticker": "QCOM",
+   "info": {
+    "longName": "QUALCOMM Incorporated",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "currency": "USD",
+    "currentPrice": 201.97,
+    "marketCap": 215716184064,
+    "trailingPE": 23.108696,
+    "forwardPE": 19.7932,
+    "priceToBook": 7.7185006,
+    "enterpriseValue": 210984435712,
+    "trailingEps": 8.74
+   },
+   "ebit": 13327000000.0
+  },
+  "TXN": {
+   "ticker": "TXN",
+   "info": {
+    "longName": "Texas Instruments Incorporated",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "currency": "USD",
+    "currentPrice": 278.07,
+    "marketCap": 253946789888,
+    "trailingPE": 42.25988,
+    "forwardPE": 26.122492,
+    "priceToBook": 14.098768,
+    "enterpriseValue": 254221484032,
+    "trailingEps": 6.58
+   },
+   "ebit": 6253000000.0
+  },
+  "AMAT": {
+   "ticker": "AMAT",
+   "info": {
+    "longName": "Applied Materials, Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment & Materials",
+    "currency": "USD",
+    "currentPrice": 485.0,
+    "marketCap": 384894763008,
+    "trailingPE": 41.91876,
+    "forwardPE": 26.28044,
+    "priceToBook": 15.019665,
+    "enterpriseValue": 374476603392,
+    "trailingEps": 11.57
+   },
+   "ebit": 9540000000.0
+  },
+  "WDC": {
+   "ticker": "WDC",
+   "info": {
+    "longName": "Western Digital Corporation",
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "currency": "USD",
+    "currentPrice": 456.81,
+    "marketCap": 164698701824,
+    "trailingPE": 16.962866,
+    "forwardPE": 14.387929,
+    "priceToBook": null,
+    "enterpriseValue": 161967194112,
+    "trailingEps": 26.93
+   },
+   "ebit": 10070000000.0
+  },
+  "STX": {
+   "ticker": "STX",
+   "info": {
+    "longName": "Seagate Technology Holdings plc",
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "currency": "USD",
+    "currentPrice": 916.83,
+    "marketCap": 208480731136,
+    "trailingPE": 66.14935,
+    "forwardPE": 16.557827,
+    "priceToBook": 95.9529,
+    "enterpriseValue": 207515795456,
+    "trailingEps": 13.86
+   },
+   "ebit": 3974000000.0
+  }
+ }
+}

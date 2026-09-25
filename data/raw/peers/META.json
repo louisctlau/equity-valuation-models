@@ -1,0 +1,97 @@
+{
+ "ticker": "META",
+ "peers": [
+  "GOOG",
+  "PINS",
+  "SNAP",
+  "RDDT",
+  "MSFT"
+ ],
+ "data": {
+  "GOOG": {
+   "ticker": "GOOG",
+   "info": {
+    "longName": "Alphabet Inc.",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "currency": "USD",
+    "currentPrice": 341.08,
+    "marketCap": 4171386060800,
+    "trailingPE": 17.113897,
+    "forwardPE": 22.892488,
+    "priceToBook": 6.7015085,
+    "enterpriseValue": 4042432184320,
+    "trailingEps": 19.93
+   },
+   "ebit": 159562000000.0
+  },
+  "PINS": {
+   "ticker": "PINS",
+   "info": {
+    "longName": "Pinterest, Inc.",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "currency": "USD",
+    "currentPrice": 18.9,
+    "marketCap": 10703315968,
+    "trailingPE": 55.588234,
+    "forwardPE": 7.868443,
+    "priceToBook": 3.6935704,
+    "enterpriseValue": 10523113472,
+    "trailingEps": 0.34
+   },
+   "ebit": 319883000.0
+  },
+  "SNAP": {
+   "ticker": "SNAP",
+   "info": {
+    "longName": "Snap Inc.",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "currency": "USD",
+    "currentPrice": 5.42,
+    "marketCap": 9166291968,
+    "trailingPE": null,
+    "forwardPE": 6.9894,
+    "priceToBook": 4.7294936,
+    "enterpriseValue": 10749192192,
+    "trailingEps": -0.18
+   },
+   "ebit": -329138000.0
+  },
+  "RDDT": {
+   "ticker": "RDDT",
+   "info": {
+    "longName": "Reddit, Inc.",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "currency": "USD",
+    "currentPrice": 149.84,
+    "marketCap": 28828692480,
+    "trailingPE": 34.76566,
+    "forwardPE": 15.46737,
+    "priceToBook": 8.77078,
+    "enterpriseValue": 26617305088,
+    "trailingEps": 4.31
+   },
+   "ebit": 441984000.0
+  },
+  "MSFT": {
+   "ticker": "MSFT",
+   "info": {
+    "longName": "Microsoft Corporation",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "currency": "USD",
+    "currentPrice": 516.17,
+    "marketCap": 3832843862016,
+    "trailingPE": 28.788063,
+    "forwardPE": 21.801512,
+    "priceToBook": 8.665659,
+    "enterpriseValue": 3749371969536,
+    "trailingEps": 17.93
+   },
+   "ebit": 168985000000.0
+  }
+ }
+}

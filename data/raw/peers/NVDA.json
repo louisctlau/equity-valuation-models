@@ -1,0 +1,115 @@
+{
+ "ticker": "NVDA",
+ "peers": [
+  "AMD",
+  "AVGO",
+  "QCOM",
+  "TXN",
+  "AMAT",
+  "INTC"
+ ],
+ "data": {
+  "AMD": {
+   "ticker": "AMD",
+   "info": {
+    "longName": "Advanced Micro Devices, Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "currency": "USD",
+    "currentPrice": 630.63,
+    "marketCap": 1029487722496,
+    "trailingPE": 161.7,
+    "forwardPE": 40.48134,
+    "priceToBook": 15.309897,
+    "enterpriseValue": 1018416267264,
+    "trailingEps": 3.9
+   },
+   "ebit": 4271000000.0
+  },
+  "AVGO": {
+   "ticker": "AVGO",
+   "info": {
+    "longName": "Broadcom Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "currency": "USD",
+    "currentPrice": 352.81,
+    "marketCap": 1684184367104,
+    "trailingPE": 45.582687,
+    "forwardPE": 18.20118,
+    "priceToBook": 16.895412,
+    "enterpriseValue": 1707932909568,
+    "trailingEps": 7.74
+   },
+   "ebit": 25939000000.0
+  },
+  "QCOM": {
+   "ticker": "QCOM",
+   "info": {
+    "longName": "QUALCOMM Incorporated",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "currency": "USD",
+    "currentPrice": 201.97,
+    "marketCap": 215716184064,
+    "trailingPE": 23.108696,
+    "forwardPE": 19.7932,
+    "priceToBook": 7.7185006,
+    "enterpriseValue": 210984435712,
+    "trailingEps": 8.74
+   },
+   "ebit": 13327000000.0
+  },
+  "TXN": {
+   "ticker": "TXN",
+   "info": {
+    "longName": "Texas Instruments Incorporated",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "currency": "USD",
+    "currentPrice": 278.07,
+    "marketCap": 253946789888,
+    "trailingPE": 42.25988,
+    "forwardPE": 26.122492,
+    "priceToBook": 14.098768,
+    "enterpriseValue": 254221484032,
+    "trailingEps": 6.58
+   },
+   "ebit": 6253000000.0
+  },
+  "AMAT": {
+   "ticker": "AMAT",
+   "info": {
+    "longName": "Applied Materials, Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment & Materials",
+    "currency": "USD",
+    "currentPrice": 485.0,
+    "marketCap": 384894763008,
+    "trailingPE": 41.91876,
+    "forwardPE": 26.28044,
+    "priceToBook": 15.019665,
+    "enterpriseValue": 374476603392,
+    "trailingEps": 11.57
+   },
+   "ebit": 9540000000.0
+  },
+  "INTC": {
+   "ticker": "INTC",
+   "info": {
+    "longName": "Intel Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "currency": "USD",
+    "currentPrice": 123.0,
+    "marketCap": 650190913536,
+    "trailingPE": null,
+    "forwardPE": 59.648514,
+    "priceToBook": 7.085662,
+    "enterpriseValue": 678966132736,
+    "trailingEps": -2.09
+   },
+   "ebit": 2648000000.0
+  }
+ }
+}
