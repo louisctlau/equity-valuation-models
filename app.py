@@ -10,7 +10,9 @@ No live market calls at request time: the snapshot is the data.
 Sensitivity grids are computed live from the snapshot's stored inputs.
 """
 import json
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import matplotlib.pyplot as plt
 import streamlit as st
@@ -71,6 +73,19 @@ def fcfe_grid(f0, sh, ke, g_term0, g5):
     return rows
 
 
+def batch_label(man):
+    """Display stamp for the last batch: '2026-10-25 03:24 EDT' when the
+    manifest recorded a timestamp, else the snapshot date."""
+    raw = man.get("snapshot_datetime")
+    if raw:
+        try:
+            dt = datetime.fromisoformat(raw).astimezone(ZoneInfo("America/Toronto"))
+            return dt.strftime("%Y-%m-%d %H:%M %Z")
+        except Exception:
+            return raw
+    return man["snapshot_date"]
+
+
 def main():
     st.set_page_config(page_title="S&P 500 Valuation — 9 Models", layout="wide")
     data = load_snapshot()
@@ -78,7 +93,7 @@ def main():
 
     st.title("S&P 500 Valuation — 9 Models")
     st.caption(
-        f"Snapshot **{man['snapshot_date']}** · {man['ok']} of {man['universe']} "
+        f"Last batch loaded **{batch_label(man)}** · {man['ok']} of {man['universe']} "
         f"constituents valued · {len(man['failed'])} failed · "
         f"risk-free {man['rf']:.2%} (^TNX) · ERP {man['erp']:.1%} · "
         f"refreshed daily. Sector medians anchor the relative models."

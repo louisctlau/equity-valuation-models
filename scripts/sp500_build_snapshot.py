@@ -24,8 +24,9 @@ import json
 import statistics
 import sys
 import time
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import warnings
@@ -266,7 +267,10 @@ def main():
                   "replacement_cost"]
     coverage = {k: sum(1 for r in records.values() if r["models"].get(k) is not None)
                 for k in model_keys}
-    manifest = {"snapshot_date": today, "rf": rf, "erp": L.ERP,
+    manifest = {"snapshot_date": today,
+                "snapshot_datetime":
+                    datetime.now(ZoneInfo("America/Toronto")).isoformat(timespec="minutes"),
+                "rf": rf, "erp": L.ERP,
                 "universe": len(consts), "ok": len(records),
                 "failed": failed, "coverage": coverage}
     (SNAP / "latest.json").write_text(json.dumps(
