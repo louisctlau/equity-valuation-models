@@ -88,6 +88,10 @@ def batch_label(man):
 
 def main():
     st.set_page_config(page_title="S&P 500 Valuation — 9 Models", layout="wide")
+    # Sidebar nav is hidden: the app is a single-page lookup, and the
+    # changelog page is reached via the link under the title (USMS pattern).
+    st.markdown("<style>[data-testid='stSidebarNav']{display:none;}</style>",
+                unsafe_allow_html=True)
     data = load_snapshot()
     man, tickers = data["manifest"], data["tickers"]
 
@@ -101,6 +105,7 @@ def main():
         f"risk-free {man['rf']:.2%} (^TNX) · ERP {man['erp']:.1%} · "
         f"refreshed daily. Sector medians anchor the relative models."
     )
+    st.page_link("pages/changelog.py", label="Changelog")
 
     options = sorted(tickers.keys())
     labels = {s: f"{s} — {tickers[s]['name']}" for s in options}
