@@ -32,6 +32,20 @@ MODEL_ROWS = [
     ("3c. Replacement cost", "Asset-based", "replacement_cost"),
 ]
 
+# One distinct marker + colour per model on the range chart, keyed by model
+# key (not position) so a model keeps its marker even when others are N/A.
+MODEL_MARKERS = {
+    "ddm_gordon": ("*", "gold"),
+    "ddm_two_stage": ("s", "tab:blue"),
+    "fcfe": ("^", "tab:red"),
+    "pe_comps": ("o", "tab:green"),
+    "pb_comps": ("D", "purple"),
+    "ev_ebita": ("p", "orange"),
+    "book_value": ("h", "cyan"),
+    "liquidation": ("X", "magenta"),
+    "replacement_cost": ("v", "brown"),
+}
+
 
 @st.cache_data
 def load_snapshot():
@@ -138,13 +152,14 @@ def main():
         })
     st.dataframe(rows, use_container_width=True, hide_index=True)
 
-    vals = [(label, r["models"][key]) for label, _, key in MODEL_ROWS
+    vals = [(label, key, r["models"][key]) for label, _, key in MODEL_ROWS
             if r["models"].get(key) is not None]
     if vals and price:
         fig, ax = plt.subplots(figsize=(9, 3.5))
-        names = [v[0] for v in vals]
-        xs = [v[1] for v in vals]
-        ax.scatter(xs, names, s=60, zorder=3)
+        for label, key, x in vals:
+            marker, color = MODEL_MARKERS[key]
+            ax.scatter([x], [label], marker=marker, color=color, s=100,
+                       edgecolors="black", linewidths=0.5, zorder=3)
         ax.axvline(price, color="red", linestyle="--", label=f"Price ${price:,.2f}")
         ax.set_xlabel("US$/share")
         ax.legend()

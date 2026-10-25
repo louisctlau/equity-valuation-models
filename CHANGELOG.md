@@ -1,5 +1,13 @@
 # Changelog — S&P 500 Valuation
 
+## 2026-10-25 — Distinct chart markers
+
+- The valuation range chart now gives every model its own marker and colour:
+  Gordon DDM a yellow star, two-stage DDM a blue square, FCFE a red triangle,
+  P/E comps a green circle, P/B comps a purple diamond, EV/EBITA an orange
+  pentagon, book value a cyan hexagon, liquidation a magenta X, replacement
+  cost a brown down-triangle. Previously every model plotted as the same dot.
+
 ## 2026-10-25 — Title renamed
 
 - App title changed to "S&P 500 - Equity Valuation: 9 Models" (main page heading
