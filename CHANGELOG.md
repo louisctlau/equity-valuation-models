@@ -1,5 +1,10 @@
 # Changelog — S&P 500 Valuation
 
+## 2026-10-25 — Title renamed
+
+- App title changed to "S&P 500 - Equity Valuation: 9 Models" (main page heading
+  and browser tab; changelog tab retitled to match).
+
 ## 2026-10-25 — Changelog page, batch timestamp, disclaimer
 
 - Changelog as its own page (USMS / Portfolio Lab pattern): a Changelog link under

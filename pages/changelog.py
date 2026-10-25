@@ -3,7 +3,7 @@ from pathlib import Path
 
 import streamlit as st
 
-st.set_page_config(page_title="Changelog — S&P 500 Valuation", layout="wide")
+st.set_page_config(page_title="Changelog — S&P 500 - Equity Valuation: 9 Models", layout="wide")
 # Sidebar nav stays hidden; navigation is the link under the title in app.py.
 st.markdown("<style>[data-testid='stSidebarNav']{display:none;}</style>",
             unsafe_allow_html=True)

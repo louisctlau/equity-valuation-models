@@ -87,7 +87,7 @@ def batch_label(man):
 
 
 def main():
-    st.set_page_config(page_title="S&P 500 Valuation — 9 Models", layout="wide")
+    st.set_page_config(page_title="S&P 500 - Equity Valuation: 9 Models", layout="wide")
     # Sidebar nav is hidden: the app is a single-page lookup, and the
     # changelog page is reached via the link under the title (USMS pattern).
     st.markdown("<style>[data-testid='stSidebarNav']{display:none;}</style>",
@@ -95,7 +95,7 @@ def main():
     data = load_snapshot()
     man, tickers = data["manifest"], data["tickers"]
 
-    st.title("S&P 500 Valuation — 9 Models")
+    st.title("S&P 500 - Equity Valuation: 9 Models")
     st.markdown("<p style='color:red;'>For educational and experimental purposes "
                 "only. Not investment advice.</p>",
                 unsafe_allow_html=True)
