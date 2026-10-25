@@ -8,6 +8,41 @@ honest answer is a range, not a point estimate.
 Valuation date: **2026-09-25** · Risk-free rate **5.18%** (US 10Y ^TNX) ·
 ERP 4.5% · cost of equity via CAPM (β from Yahoo Finance).
 
+## S&P 500 app (live extension, 2026-10-25)
+
+The same 9 models, scaled to the full S&P 500 as a ticker-lookup app
+(`app.py`, Streamlit). Type any constituent and see all 9 model values,
+a range chart against the market price, and live Gordon-DDM and FCFE
+sensitivity grids.
+
+- **Universe:** 503 constituents (Wikipedia list, refreshed with each
+  build) across 11 GICS sectors; dual classes kept (GOOG/GOOGL, BRK.B).
+- **Data:** Yahoo Finance via yfinance (unofficial, no licence), fetched
+  once a day into `data/snapshot/latest.json` — the app makes no live
+  market calls. Each ticker's statement fiscal year-end is shown in the
+  app, because year-ends differ and rollovers move outputs a lot (MU's
+  FY2026 statements landed between the study and the first snapshot).
+- **Relative-model anchor:** with hand-picked peers dropped, the P/E, P/B
+  and EV/EBITA medians are the company's own GICS sector median,
+  computed from the same snapshot (index-wide median if a sector has
+  fewer than 5 valid names). P/B is N/A when equity ≤ 0, P/E when EPS
+  ≤ 0, EV/EBITA when EBIT ≤ 0.
+- **Assumptions at scale:** no per-ticker files — Gordon g 5% for all,
+  dividend growth = 5-year dividend CAGR (clipped to 18%, 5% fallback),
+  FCFE growth = 5-year FCFE CAGR (clipped to 20%, 8% fallback), stable
+  growth 3%, terminal growth 2.75%, ERP 4.5%, live ^TNX for the
+  risk-free rate. Per-ticker data fallbacks are logged in the snapshot
+  and shown in the app.
+- **First snapshot (2026-10-25):** 503/503 valued, rf 4.99%. Coverage:
+  Gordon DDM 419, two-stage DDM 420, FCFE 503, P/E comps 478, P/B comps
+  472, EV/EBITA 454, book/liquidation/replacement 503. DDM gaps are
+  mostly non-dividend payers.
+- **Rebuild:** `python scripts/sp500_fetch_constituents.py` then
+  `python scripts/sp500_build_snapshot.py` (resumes per ticker from
+  `data/snapshot/snapshot_work/`, which is not pushed to GitHub).
+  Prototype validation of the yfinance mapping lives in
+  `prototype_yf/` (6-ticker reproduction of the Sep 25 study).
+
 ## The 9 models
 
 **1. Present value** (discounted at cost of equity)

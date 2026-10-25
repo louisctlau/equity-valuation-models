@@ -1,0 +1,19 @@
+{
+ "snapshot_date": "2026-10-25",
+ "rf": 0.0498799991607666,
+ "erp": 0.045,
+ "universe": 503,
+ "ok": 503,
+ "failed": [],
+ "coverage": {
+  "ddm_gordon": 419,
+  "ddm_two_stage": 420,
+  "fcfe": 503,
+  "pe_comps": 478,
+  "pb_comps": 472,
+  "ev_ebita": 454,
+  "book_value": 503,
+  "liquidation": 503,
+  "replacement_cost": 503
+ }
+}

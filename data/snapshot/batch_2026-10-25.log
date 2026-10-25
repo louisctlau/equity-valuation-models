@@ -1,0 +1,20 @@
+rf=4.9880%  universe=503  date=2026-10-25
+  ...50/503 ok=50 failed=0
+  ...100/503 ok=100 failed=0
+  ...150/503 ok=150 failed=0
+  FDS attempt 1: ValueError missing latest statements
+  FDS attempt 2: ValueError missing latest statements
+  FDS attempt 3: ValueError missing latest statements
+  FERG attempt 1: ValueError missing latest statements
+  FERG attempt 2: ValueError missing latest statements
+  FERG attempt 3: ValueError missing latest statements
+  ...200/503 ok=198 failed=2
+  ...250/503 ok=248 failed=2
+  ...300/503 ok=298 failed=2
+  ...350/503 ok=348 failed=2
+  ...400/503 ok=398 failed=2
+  ...450/503 ok=448 failed=2
+  ...500/503 ok=498 failed=2
+DONE ok=501 failed=2
+coverage: {'ddm_gordon': 417, 'ddm_two_stage': 418, 'fcfe': 501, 'pe_comps': 476, 'pb_comps': 470, 'ev_ebita': 452, 'book_value': 501, 'liquidation': 501, 'replacement_cost': 501}
+failed: ['FDS', 'FERG']

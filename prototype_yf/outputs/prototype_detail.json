@@ -1,0 +1,208 @@
+{
+ "live_tnx_memo": 0.0498799991607666,
+ "tickers": {
+  "NVDA": {
+   "price": 215.74000244140626,
+   "ke": 0.15156,
+   "beta": 2.216,
+   "shares": 24304000000.0,
+   "dividend_ann": 0.52,
+   "fcfe_base": 100919000000.0,
+   "missing_fields": {
+    "inc_missing": [],
+    "bs_missing": [
+     "Total Liabilities Net Minority Interest",
+     "Net Accounts Receivable",
+     "Prepaid Assets",
+     "Other Investments"
+    ],
+    "cf_missing": [
+     "Issuance Of Debt",
+     "Long Term Debt Issued",
+     "Net Issuance Of Debt"
+    ]
+   },
+   "cat2_inputs": {
+    "trailingEps": 7.91,
+    "trailingPE": 26.67004,
+    "priceToBook": 22.246126,
+    "ebit": 141709000000.0,
+    "equity": 157293000000.0,
+    "totalDebt": 11040000000.0,
+    "cash": 10605000000.0,
+    "enterpriseValue": 5060526866432,
+    "sector": "Technology",
+    "industry": "Semiconductors"
+   }
+  },
+  "AMD": {
+   "price": 530.0459838867188,
+   "ke": 0.16227,
+   "beta": 2.454,
+   "shares": 1630000000.0,
+   "dividend_ann": 0.0,
+   "fcfe_base": 5478000000.0,
+   "missing_fields": {
+    "inc_missing": [],
+    "bs_missing": [
+     "Net Accounts Receivable",
+     "Prepaid Assets",
+     "Investments And Advances",
+     "Other Investments"
+    ],
+    "cf_missing": [
+     "Long Term Debt Issued",
+     "Net Issuance Of Debt"
+    ]
+   },
+   "cat2_inputs": {
+    "trailingEps": 3.92,
+    "trailingPE": 131.83418,
+    "priceToBook": 12.546186,
+    "ebit": 4271000000.0,
+    "equity": 62999000000.0,
+    "totalDebt": 3847000000.0,
+    "cash": 5539000000.0,
+    "enterpriseValue": 834811789312,
+    "sector": "Technology",
+    "industry": "Semiconductors"
+   }
+  },
+  "MU": {
+   "price": 889.7359985351562,
+   "ke": 0.15200999999999998,
+   "beta": 2.226,
+   "shares": 1131000000.0,
+   "dividend_ann": 0.565,
+   "fcfe_base": 60722000000.0,
+   "missing_fields": {
+    "inc_missing": [],
+    "bs_missing": [
+     "Net Accounts Receivable",
+     "Prepaid Assets",
+     "Other Intangible Assets",
+     "Other Investments"
+    ],
+    "cf_missing": [
+     "Long Term Debt Issued",
+     "Net Issuance Of Debt"
+    ]
+   },
+   "cat2_inputs": {
+    "trailingEps": 74.33,
+    "trailingPE": 11.806134,
+    "priceToBook": 7.1724563,
+    "ebit": 99777000000.0,
+    "equity": 138378000000.0,
+    "totalDebt": 5179000000.0,
+    "cash": 38364000000.0,
+    "enterpriseValue": 954625425408,
+    "sector": "Technology",
+    "industry": "Semiconductors"
+   }
+  },
+  "AAPL": {
+   "price": 344.4760009765625,
+   "ke": 0.09994499999999999,
+   "beta": 1.069,
+   "shares": 14773260000.0,
+   "dividend_ann": 1.06,
+   "fcfe_base": 79542000000.0,
+   "missing_fields": {
+    "inc_missing": [],
+    "bs_missing": [
+     "Net Accounts Receivable",
+     "Prepaid Assets",
+     "Goodwill",
+     "Other Intangible Assets",
+     "Goodwill And Other Intangible Assets",
+     "Other Investments"
+    ],
+    "cf_missing": [
+     "Long Term Debt Issued",
+     "Net Issuance Of Debt"
+    ]
+   },
+   "cat2_inputs": {
+    "trailingEps": 8.72,
+    "trailingPE": 39.87672,
+    "priceToBook": 47.245243,
+    "ebit": 133050000000.0,
+    "equity": 73733000000.0,
+    "totalDebt": 98657000000.0,
+    "cash": 35934000000.0,
+    "enterpriseValue": 5096706408448,
+    "sector": "Technology",
+    "industry": "Consumer Electronics"
+   }
+  },
+  "META": {
+   "price": 677.7359985351562,
+   "ke": 0.105165,
+   "beta": 1.185,
+   "shares": 2529638328.0,
+   "dividend_ann": 2.1,
+   "fcfe_base": 35880000000.0,
+   "missing_fields": {
+    "inc_missing": [],
+    "bs_missing": [
+     "Net Accounts Receivable",
+     "Inventory",
+     "Prepaid Assets",
+     "Other Investments"
+    ],
+    "cf_missing": [
+     "Long Term Debt Issued",
+     "Net Issuance Of Debt"
+    ]
+   },
+   "cat2_inputs": {
+    "trailingEps": 29.31,
+    "trailingPE": 21.92494,
+    "priceToBook": 6.0301967,
+    "ebit": 87097000000.0,
+    "equity": 217243000000.0,
+    "totalDebt": 83897000000.0,
+    "cash": 35873000000.0,
+    "enterpriseValue": 1675084693504,
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information"
+   }
+  },
+  "GOOG": {
+   "price": 329.11000366210936,
+   "ke": 0.106335,
+   "beta": 1.211,
+   "shares": 12088000000.0,
+   "dividend_ann": 0.86,
+   "fcfe_base": 94614000000.0,
+   "missing_fields": {
+    "inc_missing": [],
+    "bs_missing": [
+     "Total Liabilities Net Minority Interest",
+     "Net Accounts Receivable",
+     "Inventory",
+     "Prepaid Assets",
+     "Other Intangible Assets",
+     "Other Investments"
+    ],
+    "cf_missing": [
+     "Long Term Debt Issued",
+     "Net Issuance Of Debt"
+    ]
+   },
+   "cat2_inputs": {
+    "trailingEps": 19.93,
+    "trailingPE": 15.919719,
+    "priceToBook": 6.2338886,
+    "ebit": 159562000000.0,
+    "equity": 415265000000.0,
+    "totalDebt": 59291000000.0,
+    "cash": 30708000000.0,
+    "enterpriseValue": 3776674529280,
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information"
+   }
+  }
+ }
+}

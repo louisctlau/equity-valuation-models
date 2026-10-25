@@ -1,0 +1,8 @@
+model,category,NVDA,AMD,MU,AAPL,META,GOOG
+1a. Gordon DDM,Present value,5.38,,5.82,22.28,39.97,16.03
+1b. Two-stage DDM,Present value,6.97,,6.74,18.48,46.96,21.26
+1c. FCFE model,Present value,61.2,52.13,706.25,95.18,274.41,143.24
+3a. Book value,Asset-based,6.47,38.65,122.35,4.99,85.88,34.35
+3b. Liquidation,Asset-based,2.87,6.94,48.84,-8.99,21.92,12.4
+3c. Replacement cost,Asset-based,5.94,14.02,146.28,7.81,103.86,40.34
+Market price,-,215.74,530.05,889.74,344.48,677.74,329.11
