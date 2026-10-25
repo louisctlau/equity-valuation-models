@@ -92,6 +92,9 @@ def main():
     man, tickers = data["manifest"], data["tickers"]
 
     st.title("S&P 500 Valuation — 9 Models")
+    st.markdown("<p style='color:red;'>For educational and experimental purposes "
+                "only. Not investment advice.</p>",
+                unsafe_allow_html=True)
     st.caption(
         f"Last batch loaded **{batch_label(man)}** · {man['ok']} of {man['universe']} "
         f"constituents valued · {len(man['failed'])} failed · "
