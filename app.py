@@ -10,6 +10,8 @@ No live market calls at request time: the snapshot is the data.
 Sensitivity grids are computed live from the snapshot's stored inputs.
 """
 import json
+import statistics
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -161,10 +163,32 @@ def main():
             ax.scatter([x], [label], marker=marker, color=color, s=100,
                        edgecolors="black", linewidths=0.5, zorder=3)
         ax.axvline(price, color="red", linestyle="--", label=f"Price ${price:,.2f}")
+        # Summary lines over the plotted model values, each its own colour
+        # (and linestyle, so they stay distinct from each other and the
+        # price line). Mode = most common whole-dollar-rounded value; with
+        # continuous values a repeat is what makes a mode meaningful, so no
+        # mode line is drawn when every rounded value is unique.
+        xs_all = [x for _, _, x in vals]
+        mean_v = statistics.mean(xs_all)
+        median_v = statistics.median(xs_all)
+        rounded = Counter(round(x) for x in xs_all)
+        mode_v = None
+        if max(rounded.values()) > 1:
+            mode_v = min(v for v, c in rounded.items()
+                         if c == max(rounded.values()))
+        ax.axvline(mean_v, color="black", linestyle="-", linewidth=1.5,
+                   label=f"Mean ${mean_v:,.2f}")
+        ax.axvline(median_v, color="navy", linestyle="-.", linewidth=1.5,
+                   label=f"Median ${median_v:,.2f}")
+        if mode_v is not None:
+            ax.axvline(mode_v, color="olive", linestyle=":", linewidth=1.8,
+                       label=f"Mode ${mode_v:,.0f}")
         ax.set_xlabel("US$/share")
         ax.legend()
         ax.grid(axis="x", alpha=0.3)
         st.pyplot(fig)
+        if mode_v is None:
+            st.caption("Mode: none — no two models round to the same whole dollar.")
 
     med = r.get("sector_medians", {})
     if med:

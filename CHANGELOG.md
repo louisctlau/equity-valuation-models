@@ -1,5 +1,14 @@
 # Changelog — S&P 500 Valuation
 
+## 2026-10-25 — Mean / median / mode lines on the chart
+
+- The valuation range chart now also draws vertical lines for the mean, median
+  and mode of the plotted model values: mean black solid, median navy
+  dash-dot, mode olive dotted, each labelled with its value in the legend
+  alongside the red dashed price line. Mode is the most common
+  whole-dollar-rounded value; when no value repeats, no mode line is drawn
+  and a note under the chart says so.
+
 ## 2026-10-25 — Distinct chart markers
 
 - The valuation range chart now gives every model its own marker and colour:
