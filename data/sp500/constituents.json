@@ -3032,12 +3032,12 @@
   "cik": "822416"
  },
  {
-  "symbol": "PWR",
-  "yahoo_symbol": "PWR",
-  "name": "Quanta Services",
-  "sector": "Industrials",
-  "sub_industry": "Construction & Engineering",
-  "cik": "1050915"
+  "symbol": "Q",
+  "yahoo_symbol": "Q",
+  "name": "Qnity Electronics",
+  "sector": "Information Technology",
+  "sub_industry": "Semiconductor Materials & Equipment",
+  "cik": "2058873"
  },
  {
   "symbol": "QCOM",
@@ -3048,20 +3048,20 @@
   "cik": "804328"
  },
  {
+  "symbol": "PWR",
+  "yahoo_symbol": "PWR",
+  "name": "Quanta Services",
+  "sector": "Industrials",
+  "sub_industry": "Construction & Engineering",
+  "cik": "1050915"
+ },
+ {
   "symbol": "DGX",
   "yahoo_symbol": "DGX",
   "name": "Quest Diagnostics",
   "sector": "Health Care",
   "sub_industry": "Health Care Services",
   "cik": "1022079"
- },
- {
-  "symbol": "Q",
-  "yahoo_symbol": "Q",
-  "name": "Qnity Electronics",
-  "sector": "Information Technology",
-  "sub_industry": "Semiconductor Materials & Equipment",
-  "cik": "2058873"
  },
  {
   "symbol": "RL",
@@ -3086,14 +3086,6 @@
   "sector": "Communication Services",
   "sub_industry": "Interactive Media & Services",
   "cik": "1713445"
- },
- {
-  "symbol": "RTX",
-  "yahoo_symbol": "RTX",
-  "name": "RTX Corporation",
-  "sector": "Industrials",
-  "sub_industry": "Aerospace & Defense",
-  "cik": "101829"
  },
  {
   "symbol": "O",
@@ -3200,6 +3192,14 @@
   "cik": "884887"
  },
  {
+  "symbol": "RTX",
+  "yahoo_symbol": "RTX",
+  "name": "RTX Corporation",
+  "sector": "Industrials",
+  "sub_industry": "Aerospace & Defense",
+  "cik": "101829"
+ },
+ {
   "symbol": "SPGI",
   "yahoo_symbol": "SPGI",
   "name": "S&P Global",
@@ -3282,7 +3282,7 @@
  {
   "symbol": "SKYD",
   "yahoo_symbol": "SKYD",
-  "name": "Skydance Corporation",
+  "name": "Skydance",
   "sector": "Communication Services",
   "sub_industry": "Movies & Entertainment",
   "cik": "2041610"
