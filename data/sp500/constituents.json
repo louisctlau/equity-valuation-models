@@ -3000,20 +3000,20 @@
   "cik": "1137774"
  },
  {
-  "symbol": "PEG",
-  "yahoo_symbol": "PEG",
-  "name": "Public Service Enterprise Group",
-  "sector": "Utilities",
-  "sub_industry": "Electric Utilities",
-  "cik": "788784"
- },
- {
   "symbol": "PTC",
   "yahoo_symbol": "PTC",
   "name": "PTC Inc.",
   "sector": "Information Technology",
   "sub_industry": "Application Software",
   "cik": "857005"
+ },
+ {
+  "symbol": "PEG",
+  "yahoo_symbol": "PEG",
+  "name": "Public Service Enterprise Group",
+  "sector": "Utilities",
+  "sub_industry": "Electric Utilities",
+  "cik": "788784"
  },
  {
   "symbol": "PSA",
