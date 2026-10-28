@@ -1,0 +1,13 @@
+rf=5.0450%  universe=503  date=2026-10-28
+  ...50/503 ok=50 failed=0
+  ...100/503 ok=100 failed=0
+  ...150/503 ok=150 failed=0
+  ...200/503 ok=200 failed=0
+  ...250/503 ok=250 failed=0
+  ...300/503 ok=300 failed=0
+  ...350/503 ok=350 failed=0
+  ...400/503 ok=400 failed=0
+  ...450/503 ok=450 failed=0
+  ...500/503 ok=500 failed=0
+DONE ok=503 failed=0
+coverage: {'ddm_gordon': 419, 'ddm_two_stage': 420, 'fcfe': 503, 'pe_comps': 479, 'pb_comps': 472, 'ev_ebita': 454, 'book_value': 503, 'liquidation': 503, 'replacement_cost': 503}
