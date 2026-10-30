@@ -1,5 +1,28 @@
 # Changelog — S&P 500 Valuation
 
+## 2026-10-30 — Market breadth tab and valuation history
+
+- **Market breadth tab:** a second tab beside Ticker lookup, computed from
+  the latest snapshot for all 503 constituents — headline breadth (share
+  of names whose mean model value sits above price), a histogram of mean
+  model value vs price, a sector breadth table (median upside and share
+  above price per GICS sector), consensus tables (every model on the same
+  side of the price), and the ten names whose models agree most tightly.
+  The tab states plainly that present-value models sit structurally below
+  market prices, so a negative mean upside is the norm — read breadth as
+  the distribution and its movement, not the level.
+- **Valuation history:** each ticker's lookup page now charts price, mean
+  model value and median model value across past snapshots, with a
+  date × price / mean / median table. History is rebuilt from the
+  snapshot's own GitHub history back to launch (2026-10-25) and stored in
+  `data/snapshot/history.json`; the daily build script appends each new
+  batch to it, so the series grows on its own.
+- **Histogram window:** breadth upside is shown clipped to −100% to +100%
+  with out-of-window counts in the caption — a handful of names have
+  extreme means from single-model blowouts in the snapshot itself
+  (BRK.B per-share fundamentals, one outsized Gordon value), and an
+  unclipped axis hid the whole distribution behind them.
+
 ## 2026-10-25 — Mean / median / mode lines on the chart
 
 - The valuation range chart now also draws vertical lines for the mean, median

@@ -276,6 +276,27 @@ def main():
     (SNAP / "latest.json").write_text(json.dumps(
         {"manifest": manifest, "tickers": records}, indent=1))
     (SNAP / "manifest.json").write_text(json.dumps(manifest, indent=1))
+
+    # Append today's per-ticker price/mean/median to the history file the
+    # app's valuation-history chart reads. Re-running a date overwrites
+    # that date instead of duplicating it.
+    hist_path = SNAP / "history.json"
+    hist = {"dates": [], "tickers": {}}
+    if hist_path.exists():
+        try:
+            hist = json.loads(hist_path.read_text())
+        except Exception:
+            hist = {"dates": [], "tickers": {}}
+    if today not in hist["dates"]:
+        hist["dates"].append(today)
+    for sym, r in records.items():
+        vals = [v for v in r["models"].values() if v is not None]
+        hist["tickers"].setdefault(sym, {})[today] = {
+            "price": round(r["price"], 2) if r["price"] else None,
+            "mean": round(statistics.mean(vals), 2) if vals else None,
+            "median": round(statistics.median(vals), 2) if vals else None,
+            "n": len(vals)}
+    hist_path.write_text(json.dumps(hist, indent=1))
     runs = SNAP / "runs.csv"
     new = not runs.exists()
     with open(runs, "a", newline="") as f:
