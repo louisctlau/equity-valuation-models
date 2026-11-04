@@ -2152,14 +2152,6 @@
   "cik": "19617"
  },
  {
-  "symbol": "KVUE",
-  "yahoo_symbol": "KVUE",
-  "name": "Kenvue",
-  "sector": "Consumer Staples",
-  "sub_industry": "Personal Care Products",
-  "cik": "1944048"
- },
- {
   "symbol": "KDP",
   "yahoo_symbol": "KDP",
   "name": "Keurig Dr Pepper",
@@ -2774,6 +2766,14 @@
   "sector": "Energy",
   "sub_industry": "Oil & Gas Exploration & Production",
   "cik": "797468"
+ },
+ {
+  "symbol": "OKTA",
+  "yahoo_symbol": "OKTA",
+  "name": "Okta, Inc.",
+  "sector": "Information Technology",
+  "sub_industry": "Application Software",
+  "cik": "1660134"
  },
  {
   "symbol": "ODFL",
