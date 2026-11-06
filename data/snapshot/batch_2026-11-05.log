@@ -1,0 +1,7 @@
+NOTE: first run (date 2026-11-05, UTC clock) killed by VM replacement ~00:01 UTC; resumed run restarted after UTC midnight stamped 2026-11-06, killed after 62 tickers; this run uses TZ=America/Toronto so date.today()=2026-11-05 (Toronto trading day) and resume skips the 416 Nov-05 work files.
+rf=4.8370%  universe=503  date=2026-11-05
+  ...50/503 ok=50 failed=0
+  ...500/503 ok=500 failed=0
+DONE ok=503 failed=0
+coverage: {'ddm_gordon': 417, 'ddm_two_stage': 419, 'fcfe': 503, 'pe_comps': 480, 'pb_comps': 472, 'ev_ebita': 454, 'book_value': 503, 'liquidation': 503, 'replacement_cost': 503}
+EXIT=0
