@@ -3,6 +3,9 @@
 Reads data/snapshot/latest.json (built by scripts/sp500_build_snapshot.py).
 No live market calls at request time: the snapshot is the data.
 
+The snapshot is fetched from the raw GitHub URL first (so a new daily
+batch pushed to the repo shows up without a Streamlit redeploy), with
+the bundled local file as fallback when the fetch fails or is offline.
 9 models, 3 families (same engine as the 6-ticker study):
   1a Gordon DDM, 1b two-stage DDM, 1c FCFE model,
   2a P/E comps, 2b P/B comps, 2c EV/EBITA (sector medians, not hand peers),
@@ -11,6 +14,7 @@ Sensitivity grids are computed live from the snapshot's stored inputs.
 """
 import json
 import statistics
+import urllib.request
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
@@ -21,6 +25,15 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
 SNAP = ROOT / "data" / "snapshot" / "latest.json"
+HIST = ROOT / "data" / "snapshot" / "history.json"
+# Raw GitHub URLs for the same files (USMS pattern: remote first, local
+# fallback). The daily snapshot cron pushes new batches to the repo; the
+# app picks them up on the next cache refresh instead of waiting for a
+# redeploy.
+SNAP_URL = ("https://raw.githubusercontent.com/louisctlau/"
+            "equity-valuation-models/main/data/snapshot/latest.json")
+HIST_URL = ("https://raw.githubusercontent.com/louisctlau/"
+            "equity-valuation-models/main/data/snapshot/history.json")
 
 MODEL_ROWS = [
     ("1a. Gordon DDM", "Present value", "ddm_gordon"),
@@ -49,22 +62,38 @@ MODEL_MARKERS = {
 }
 
 
-@st.cache_data
-def load_snapshot():
-    with open(SNAP) as f:
-        return json.load(f)
-
-
-@st.cache_data
-def load_history():
-    p = ROOT / "data" / "snapshot" / "history.json"
-    if not p.exists():
-        return None
+def _load_json_remote_first(url, local_path):
+    """Fetch a snapshot JSON from its raw GitHub URL; fall back to the
+    bundled local file on any failure (offline, timeout, bad payload).
+    Returns None only when both sources fail / are unusable."""
     try:
-        with open(p) as f:
+        with urllib.request.urlopen(url, timeout=10) as resp:
+            data = json.load(resp)
+        if isinstance(data, dict) and data:
+            return data
+    except Exception:
+        pass
+    try:
+        with open(local_path) as f:
             return json.load(f)
     except Exception:
         return None
+
+
+@st.cache_data(ttl=3600)
+def load_snapshot():
+    # ttl=3600 is what makes the remote fetch live: without it the cache
+    # would hold the first-loaded batch for the app's whole lifetime and a
+    # new push still would not show until a reboot.
+    data = _load_json_remote_first(SNAP_URL, SNAP)
+    if data is None:
+        raise RuntimeError("Could not load snapshot from GitHub or local file")
+    return data
+
+
+@st.cache_data(ttl=3600)
+def load_history():
+    return _load_json_remote_first(HIST_URL, HIST)
 
 
 

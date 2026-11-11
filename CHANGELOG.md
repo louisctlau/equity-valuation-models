@@ -1,5 +1,21 @@
 # Changelog — S&P 500 Valuation
 
+## 2026-11-11 — Snapshot loads from GitHub first, no redeploy needed
+
+- **Remote-first snapshot loading:** the app now fetches
+  `data/snapshot/latest.json` and `data/snapshot/history.json` from their
+  raw GitHub URLs first (the USMS options-history pattern), falling back
+  to the bundled local files when the fetch fails or the app is offline —
+  a failed fetch never crashes the app. The "Last batch loaded" caption
+  therefore shows the newest batch pushed to the repo, not the batch
+  bundled at deploy time: the live app was 8 days stale (showing the
+  Nov 3 batch while GitHub already had Nov 10) because a redeploy was
+  the only way a new batch reached it.
+- **Hourly refresh:** both loaders carry `ttl=3600`, so a newly pushed
+  batch appears within an hour of landing on `main` — without a TTL the
+  cache would have held the first-loaded batch for the app's whole
+  lifetime and a reboot would still have been required.
+
 ## 2026-10-30 — Market breadth tab and valuation history
 
 - **Market breadth tab:** a second tab beside Ticker lookup, computed from
