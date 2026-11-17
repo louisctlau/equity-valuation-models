@@ -4,9 +4,11 @@
 
 - **History chart x-axis:** the chart labelled every batch date as a full
   "YYYY-MM-DD" string — 17 dates and growing, so the labels overlapped
-  into an unreadable smear. It now labels at most ~8 ticks in short
-  "Oct 25" form, rotated 45°, always including the latest date, and
-  the spacing scales as history grows with each daily batch.
+  into an unreadable smear. Every date is now labelled in short
+  "Oct 25" form, rotated 45°, with no skipping. Verified legible at
+  17 dates; the labels will crowd again as history grows past ~30
+  dates (early December), at which point vertical labels or a wider
+  chart are the remaining options.
 
 ## 2026-11-11 — Snapshot loads from GitHub first, no redeploy needed
 

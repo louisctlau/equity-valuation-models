@@ -282,17 +282,15 @@ def main():
                 if all(v is not None for v in md):
                     ax2.plot(xs, md, color="navy", linestyle="-.", marker="o",
                              label="Median model value")
-                # Dates grow with every daily batch; labelling all of them
-                # as full "YYYY-MM-DD" strings overlaps into a smear.
-                # Label at most ~8 ticks, short "Oct 25" form, rotated,
-                # always including the latest date.
-                step = max(1, len(hdates) // 8)
-                tick_xs = sorted(set(list(range(0, len(hdates), step))
-                                   + [len(hdates) - 1]))
-                ax2.set_xticks(tick_xs)
+                # Every date gets a label, in short "Oct 25" form, rotated
+                # 45 deg — full "YYYY-MM-DD" strings overlapped into a
+                # smear, and skipping dates is not wanted. Short labels
+                # fit today (17 dates); as history grows this will crowd
+                # again past ~20 dates.
+                ax2.set_xticks(xs)
                 ax2.set_xticklabels(
-                    [datetime.strptime(hdates[i], "%Y-%m-%d").strftime("%b %d")
-                     for i in tick_xs], rotation=45, ha="right")
+                    [datetime.strptime(d, "%Y-%m-%d").strftime("%b %d")
+                     for d in hdates], rotation=45, ha="right", fontsize=9)
                 fig2.tight_layout()
                 ax2.set_ylabel("US$/share")
                 ax2.legend()
