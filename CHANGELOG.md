@@ -1,5 +1,13 @@
 # Changelog — S&P 500 Valuation
 
+## 2026-11-17 — Valuation history x-axis dates legible again
+
+- **History chart x-axis:** the chart labelled every batch date as a full
+  "YYYY-MM-DD" string — 17 dates and growing, so the labels overlapped
+  into an unreadable smear. It now labels at most ~8 ticks in short
+  "Oct 25" form, rotated 45°, always including the latest date, and
+  the spacing scales as history grows with each daily batch.
+
 ## 2026-11-11 — Snapshot loads from GitHub first, no redeploy needed
 
 - **Remote-first snapshot loading:** the app now fetches
