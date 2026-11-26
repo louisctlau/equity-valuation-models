@@ -1,14 +1,14 @@
 {
- "snapshot_date": "2026-11-25",
- "snapshot_datetime": "2026-11-25T18:33-05:00",
+ "snapshot_date": "2026-11-26",
+ "snapshot_datetime": "2026-11-26T18:24-05:00",
  "rf": 0.04848000049591064,
  "erp": 0.045,
  "universe": 503,
  "ok": 503,
  "failed": [],
  "coverage": {
-  "ddm_gordon": 417,
-  "ddm_two_stage": 419,
+  "ddm_gordon": 418,
+  "ddm_two_stage": 420,
   "fcfe": 503,
   "pe_comps": 480,
   "pb_comps": 472,
