@@ -198,7 +198,7 @@ def main():
                 "vs price": (f"{(v/price-1):+.1%}" if (v is not None and price)
                              else "—"),
             })
-        st.dataframe(rows, use_container_width=True, hide_index=True)
+        st.dataframe(rows, width="stretch", hide_index=True)
 
         vals = [(label, key, r["models"][key]) for label, _, key in MODEL_ROWS
                 if r["models"].get(key) is not None]
@@ -250,13 +250,13 @@ def main():
         if r["dividend_ann"] > 0:
             st.write("Gordon DDM — value vs cost of equity and dividend growth")
             st.dataframe(gordon_grid(r["dividend_ann"], r["ke"], a["gordon_g"]),
-                         use_container_width=True)
+                         width="stretch")
         if r["fcfe_base"] is not None and r["shares"]:
             st.write("FCFE model — value vs cost of equity and terminal growth "
                      f"(5y growth {a['fcfe_g']:.1%})")
             st.dataframe(fcfe_grid(r["fcfe_base"], r["shares"], r["ke"],
                                    a["terminal_g"], a["fcfe_g"]),
-                         use_container_width=True)
+                         width="stretch")
 
         if hist is not None and sym in hist["tickers"]:
             st.subheader("Valuation history")
@@ -268,7 +268,7 @@ def main():
                       "Median model": f"${hd[d]['median']:,.2f}" if hd[d]["median"] else "N/A",
                       "Models": hd[d]["n"]} for d in hdates]
             if len(hdates) >= 2:
-                fig2, ax2 = plt.subplots(figsize=(9, 3.2))
+                fig2, ax2 = plt.subplots(figsize=(10, 3.8))
                 xs = list(range(len(hdates)))
                 pr = [hd[d]["price"] for d in hdates]
                 mn = [hd[d]["mean"] for d in hdates]
@@ -282,21 +282,28 @@ def main():
                 if all(v is not None for v in md):
                     ax2.plot(xs, md, color="navy", linestyle="-.", marker="o",
                              label="Median model value")
-                # Every date gets a label, in short "Oct 25" form, rotated
-                # 45 deg — full "YYYY-MM-DD" strings overlapped into a
-                # smear, and skipping dates is not wanted. Short labels
-                # fit today (17 dates); as history grows this will crowd
-                # again past ~20 dates.
+                # Every date gets a label, in short "Oct 25" form, set
+                # vertically. The old 45 deg labels crowded past ~20 dates
+                # (26 by late Nov) and a two-row stagger only doubles the
+                # headroom; vertical labels keep every tick labelled and
+                # readable as history grows past 30, 60, 70 dates. Type
+                # steps down to 7pt past 70 dates (clean to ~80, about
+                # mid-Feb 2027 at the daily cadence); past ~80 the labels
+                # start to touch again and the type must shrink further.
+                # A taller figure and a fixed bottom margin leave room for
+                # the label column (no tight_layout — it would recompute
+                # the margin and clip the labels).
                 ax2.set_xticks(xs)
                 ax2.set_xticklabels(
                     [datetime.strptime(d, "%Y-%m-%d").strftime("%b %d")
-                     for d in hdates], rotation=45, ha="right", fontsize=9)
-                fig2.tight_layout()
+                     for d in hdates], rotation=90, ha="center", va="top",
+                    fontsize=8 if len(hdates) <= 70 else 7)
+                fig2.subplots_adjust(bottom=0.26)
                 ax2.set_ylabel("US$/share")
                 ax2.legend()
                 ax2.grid(axis="y", alpha=0.3)
                 st.pyplot(fig2)
-            st.dataframe(hrows, use_container_width=True, hide_index=True)
+            st.dataframe(hrows, width="stretch", hide_index=True)
             st.caption("History starts 2026-10-25 and grows with each daily "
                        "batch; it tracks the snapshot's own model values, not "
                        "revised fundamentals.")
@@ -395,7 +402,7 @@ def main():
                 "Median upside": f"{statistics.median(su):+.1%}",
                 "% above price": f"{100.0 * sum(1 for b in ss if b['upside'] > 0) / len(ss):.0f}%",
             })
-        st.dataframe(sec_rows, use_container_width=True, hide_index=True)
+        st.dataframe(sec_rows, width="stretch", hide_index=True)
         st.subheader("Consensus — every model on the same side of the price")
         above = [b for b in brows if b["all_above"]]
         below = [b for b in brows if b["all_below"]]
@@ -413,18 +420,18 @@ def main():
         if above:
             st.write("All models above price (highest upside first)")
             st.dataframe(cons_table(above, lambda b: -b["upside"]),
-                         use_container_width=True, hide_index=True)
+                         width="stretch", hide_index=True)
         if below:
             st.write("All models below price (deepest downside first)")
             st.dataframe(cons_table(below, lambda b: b["upside"]),
-                         use_container_width=True, hide_index=True)
+                         width="stretch", hide_index=True)
         st.subheader("Tightest agreement — models closest together")
         tight = sorted(brows, key=lambda b: b["range_pct"])[:10]
         st.dataframe([{"Symbol": b["symbol"], "Name": b["name"],
                        "Price": f"${b['price']:,.2f}",
                        "Model range": f"{b['range_pct']:.1%} of price",
                        "Mean upside": f"{b['upside']:+.1%}"} for b in tight],
-                     use_container_width=True, hide_index=True)
+                     width="stretch", hide_index=True)
 
 
 if __name__ == "__main__":

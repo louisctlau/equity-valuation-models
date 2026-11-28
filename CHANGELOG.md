@@ -1,5 +1,9 @@
 # Changelog — S&P 500 Valuation
 
+## 2026-11-27 — Valuation history x-axis goes vertical; `use_container_width` migrated
+- **History chart x-axis:** at 26 dates the 45 deg short labels from Nov 17 were crowding again, exactly as predicted. Every date is still labelled in short "Oct 25" form, now set vertically (90 deg) with a taller figure and a fixed bottom margin instead of `tight_layout`, which would clip them. Verified legible with zero overlapping labels at 26 dates (today) and in simulation at 60 and 70 dates; type steps down from 8pt to 7pt past 70 dates (clean to ~80, about mid-Feb 2027), after which it will need to shrink further.
+- **`use_container_width` migration:** all 8 call sites in `app.py` (sensitivity grids, history table) now use `width="stretch"`, the replacement for the parameter deprecated in Streamlit 1.64. Behaviour unchanged. `requirements.txt` floor raised to `streamlit>=1.47`. Verified locally with AppTest: no exceptions, "Valuation history" renders for AAPL.
+
 ## 2026-11-17 — Valuation history x-axis dates legible again
 
 - **History chart x-axis:** the chart labelled every batch date as a full
